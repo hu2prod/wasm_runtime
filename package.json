@@ -1,0 +1,28 @@
+{
+  "name": "wasm_runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive --compilers coffee:iced-coffee-script/register --require iced-coffee-coverage/register-istanbul test && istanbul report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hu2prod/wasm_runtime.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hu2prod/wasm_runtime/issues"
+  },
+  "homepage": "https://github.com/hu2prod/wasm_runtime#readme",
+  "devDependencies": {
+    "wasm": "github:hu2prod/wasm",
+    "coveralls": "^2.11.16",
+    "iced-coffee-coverage": "^1.0.21",
+    "iced-coffee-script": "^108.0.11",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
