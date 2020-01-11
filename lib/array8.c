@@ -5,6 +5,7 @@ const u32 RTTI_ARRAY8 = 5;
 // implements generic array for u32 and LATER u8
 // should be enough for most cases
 
+__attribute__((visibility("default")))
 void** array8_alloc(size_t size) {
   void** array_ptr = __alloc_array(sizeof(u8)*size, "array8_alloc");
   size_t* size_t_view = (size_t*)array_ptr;
@@ -15,6 +16,7 @@ void** array8_alloc(size_t size) {
   
   return array_ptr;
 }
+__attribute__((visibility("default")))
 void array8_free(void** array_ptr) {
   size_t* size_t_view = (size_t*)array_ptr;
   if (size_t_view[RTTI_OFFSET] != RTTI_ARRAY8) {

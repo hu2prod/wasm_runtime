@@ -2,6 +2,7 @@
 #include "array64f.h"
 const u32 RTTI_ARRAY64F = 3;
 
+__attribute__((visibility("default")))
 void** array64f_alloc(size_t size) {
   void** array_ptr = __alloc_array(sizeof(f64)*size, "array64f_alloc");
   size_t* size_t_view = (size_t*)array_ptr;
@@ -12,6 +13,7 @@ void** array64f_alloc(size_t size) {
   
   return array_ptr;
 }
+__attribute__((visibility("default")))
 void array64f_free(void** array_ptr) {
   size_t* size_t_view = (size_t*)array_ptr;
   if (size_t_view[RTTI_OFFSET] != RTTI_ARRAY64F) {
