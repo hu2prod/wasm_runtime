@@ -6,12 +6,22 @@ i32 abs(i32 a) {
 }
 
 inline
-u32 min(u32 a, u32 b) {
+u32 umin(u32 a, u32 b) {
   return a < b ? a : b;
 }
 
 inline
-u32 max(u32 a, u32 b) {
+u32 umax(u32 a, u32 b) {
+  return a > b ? a : b;
+}
+
+inline
+i32 min(i32 a, i32 b) {
+  return a < b ? a : b;
+}
+
+inline
+i32 max(i32 a, i32 b) {
   return a > b ? a : b;
 }
 
