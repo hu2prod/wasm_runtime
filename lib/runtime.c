@@ -69,10 +69,10 @@ void __alloc_init() {
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-const i32 CAPACITY_OFFSET = -4;
-const i32 LENGTH_OFFSET   = -3;
-const i32 RTTI_OFFSET     = -2;
-const i32 REF_COUNT_OFFSET= -1;
+__attribute__((visibility("default"))) const i32 CAPACITY_OFFSET = -4;
+__attribute__((visibility("default"))) const i32 LENGTH_OFFSET   = -3;
+__attribute__((visibility("default"))) const i32 RTTI_OFFSET     = -2;
+__attribute__((visibility("default"))) const i32 REF_COUNT_OFFSET= -1;
 
 void* __alloc_ref(u32 size) {
   // rtti
