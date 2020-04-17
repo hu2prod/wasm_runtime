@@ -1,7 +1,7 @@
 #pragma once
 
 inline
-i32 abs(i32 a) {
+u32 abs(i32 a) {
   return a < 0 ? -a : a;
 }
 

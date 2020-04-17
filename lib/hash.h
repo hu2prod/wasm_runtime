@@ -1,3 +1,4 @@
+#pragma once
 #include "type.h"
 extern const u32 RTTI_HASH;
 

@@ -1,4 +1,5 @@
 #include "runtime.h"
+#include "array_size_t.h"
 #include "hash.h"
 const u32 RTTI_HASH = 9;
 
