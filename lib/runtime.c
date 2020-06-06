@@ -58,13 +58,13 @@ void __alloc_init() {
   // mini  inject
   u32 size  = __alloc_log2_bucket_count;
   size += 16; // mimic array (-3 length)
-  __array_log2_list = (void***)ws_malloc(size, "__alloc_init");
+  __array_log2_list = (void***)ws_malloc(4*size, "__alloc_init");
   for(u32 i=0;i<__alloc_log2_bucket_count;i++) {
     // -1 REF_COUNT       override -> start_pointer
     // -2 RTTI            override -> end_pointer
     // -3 LEN             override (NOT USED)
     // -4 CAP (RESERVED)  override (NOT USED)
-    __array_log2_list[i] = (void**)ws_malloc(sizeof(size_t)*__alloc_log2_bucket_size + 16, "__alloc_init");
+    __array_log2_list[i] = (void**)(ws_malloc(sizeof(size_t)*__alloc_log2_bucket_size + 16, "__alloc_init") + 16);
   }
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////
